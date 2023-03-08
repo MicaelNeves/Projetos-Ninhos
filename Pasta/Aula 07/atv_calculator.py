@@ -9,6 +9,7 @@ def soma(numero,numero2):
 def subtracao(numero,numero2):
     resultado = numero - numero2
     return f"Resultado da Subtração = {resultado}"
+
 def divisao(numero,numero2):
     if numero2==0:
         print("Erro na divisão por zero")
