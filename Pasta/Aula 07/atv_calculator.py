@@ -31,17 +31,17 @@ while True:
     b = input("Digite um outro numero: ")
     operador = input("Escolha a operação ou aperte zero para sair: ")
     try:
-        numero = float(a)djk
+        numero = float(a)
         numero1 = float(b)
         match operador:
             case '1':
-                print(soma(numero,numero2))
+                print(soma(numero,numero1))
             case '3':
-                print(subtracao(numero,numero2))
+                print(subtracao(numero,numero1))
             case '2':
-                print(mult(numero,numero2))
+                print(mult(numero,numero1))
             case '4':
-                print(divisao(numero,numero2))
+                print(divisao(numero,numero1))
             case '0':
                 break
 
