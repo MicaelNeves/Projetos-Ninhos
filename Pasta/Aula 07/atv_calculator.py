@@ -27,21 +27,24 @@ while True:
     sair - 0
     ''')
 
-    numero = float(input("Digite um numero: "))
-    numero2 = float(input("Digite um outro numero: "))
-    operador = input("Qual a operação escolhida ou aperte zero para sair: ")
-    
-    match operador:
-        case '1':
-            print(soma(numero,numero2))
-        case '3':
-            print(subtracao(numero,numero2))
-        case '2':
-            print(mult(numero,numero2))
-        case '4':
-            print(divisao(numero,numero2))
-        case '0':
-            break
+    a = input("Digite um numero: ")
+    b = input("Digite um outro numero: ")
+    operador = input("Escolha a operação ou aperte zero para sair: ")
+    try:
+        numero = float(a)djk
+        numero1 = float(b)
+        match operador:
+            case '1':
+                print(soma(numero,numero2))
+            case '3':
+                print(subtracao(numero,numero2))
+            case '2':
+                print(mult(numero,numero2))
+            case '4':
+                print(divisao(numero,numero2))
+            case '0':
+                break
 
-    if not operador.isnumeric():
-        print("Valor Invalido")
+    except:
+        print("Erro para os valores ou operação")
+
