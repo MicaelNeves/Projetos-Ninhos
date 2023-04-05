@@ -13,7 +13,7 @@ Atributos:
 	Setor_Produto
 	Descrição_Produto
 
-
+---------------------------------------------------------------------------------------------------------------
 
 2. Cadastro de Funcionários (Escola)
 
@@ -34,7 +34,7 @@ Atributos:
 	Tempo_Trabalhado_Anual
 	Salário
 
-
+-----------------------------------------------------------------------------------------------------------------
 
 3. Cadastro de Fornecedores (Tecido)
 
@@ -51,10 +51,12 @@ Atributos:
 	Qtd_Estoque
 	Variedades
 
+-------------------------------------------------------------------------------------------------------------------
+
 4. Cadastro de Departamentos (Empresa)
 
 Entidade:
-	Empresa
+	Departamentos
 
 Atributos:
 	ID_Bloco (PK)
@@ -62,7 +64,7 @@ Atributos:
 	Qtd_Funcionarios
 	Nome_Funcionarios
 	Renda_Geral Destinada
-	
+	Chefe_Departamento
 	
 
 
