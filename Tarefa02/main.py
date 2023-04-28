@@ -39,36 +39,37 @@ def CriarTabelas(aux):
 
     while aux<2:
         try: 
-            conexaoLivraria.manipularBanco(Aluguel. criarTabelaAluguel())
             conexaoLivraria.manipularBanco(Cliente. criarTabelaCliente())
             conexaoLivraria.manipularBanco(Livro. criarTabelaLivro())
+            conexaoLivraria.manipularBanco(Aluguel. criarTabelaAluguel())
             print("Tabelas Criadas com sucesso!")
         except(Exception,psycopg2.Error) as error:
             print("Algo deu Errado! ",error)
 
         aux += 1
 
-CriarTabelas(1)
+# CriarTabelas(1)
 
 def TelaPrincipal():
     
     while True:
+
         print('''
-        ===============================
+            
             BEM-VINDO ABC LIVRARIA
-        -----======================----
+            -----======================----
 
-        Qual operação você desejar realizar?
+            Qual operação você desejar realizar?
 
-        1. Cadastro de Livros
-        2. Cadastro de Clientes
-        3. Cadastro de Aluguel de Livro
-        4. Visualisar Livros do Catalogo
-        5. Visualizar Clientes assinantes
-        6. Visualisar aluguéis realizados
-        7. Sair
+            1. Cadastro de Livros
+            2. Cadastro de Clientes
+            3. Cadastro de Aluguel de Livro
+            4. Visualisar Livros do Catalogo
+            5. Visualizar Clientes assinantes
+            6. Visualisar aluguéis realizados
+            7. Sair
 
-        ''')
+            ''')
 
         op = input("Digite a ação que deseja realizar? ")
 
@@ -78,8 +79,8 @@ def TelaPrincipal():
             case "2":
                 cadastroCliente()
             case "3":
-              #  cadastroAluguel()
-              pass
+                #  cadastroAluguel()
+                pass
             case "4":
                 pass
             case "6":
@@ -87,5 +88,6 @@ def TelaPrincipal():
             case "7":
                 print("Voce Finalizou a consulta!")
                 break
-            
 
+
+TelaPrincipal()
