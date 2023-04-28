@@ -2,7 +2,7 @@ import psycopg2
 
 class Conexao:
 
-    def __init__(self, dbname, host, port, user, password) -> None:
+    def __init__(self, dbname, host, port, user, password):
         self._dbname = dbname
         self._host = host
         self._port = port
