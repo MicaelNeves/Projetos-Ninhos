@@ -12,20 +12,22 @@ class Aluguel:
     def criarTabelaAluguel():
         sql = '''
         CREATE TABLE "Aluguel"(
-        "Id_Aluguel" int GENERATED ALWAYS IDENTITY PRIMARY KEY,
+        "Id_Aluguel" int GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
         "Id_Cliente" int,
         "Id_Produto" int,
         "Nome_Produto" varchar(255) NOT NULL,
         "Quantidade" int NOT NULL default 1,
         "Preço_Total" numeric NOT NULL,
         "Hora da Aluguel" timestamp default CURRENT_TIMESTAMP(0),
-        CONSTRAINT fk_cliente
-            FOREIGN KEY("Id_Cliente")
-            REFERENCES "Cliente"("Id_Cliente")
-            ,
-        CONSTRAINT fk_livro
+    
+        CONSTRAINT fk_Livro
             FOREIGN KEY("Id_Produto")
             REFERENCES "Catalogo"("Id_Livro")
+        ,
+        CONSTRAINT fk_Cliente
+            FOREIGN KEY ("Id_Cliente")
+            REFERENCES "Cliente"("Id")
+        
         )
         '''
         return sql

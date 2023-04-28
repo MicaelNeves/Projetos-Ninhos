@@ -10,18 +10,18 @@ class Livro:
     def criarTabelaLivro():
         sql = '''
         CREATE TABLE "Catalogo"(
-        "Id_Livro" int GENERATED ALWAYS IDENTITY PRIMARY KEY,
+        "Id_Livro" int GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
         "Titulo" varchar(255) NOT NULL,
-        "Autor" varchar(11) NOT NULL,
-        "Preço" numeric NOT NULL default, 
-        "Estoque" numeric NOT NULL default
+        "Autor" varchar(255) NOT NULL,
+        "Preço" numeric NOT NULL default 0, 
+        "Estoque" numeric NOT NULL default 0
         )
         '''
         return sql
     
     def inserirLivro(self):
         sql = f'''
-        INSERT INTO "Livro"
-        values({self._id_Livro},'{self._titulo}','{self._autor},'{self._preco}','{self._estoque}')
+        INSERT INTO "Catalogo"
+        values(default,'{self._titulo}','{self._autor}', {self._preco}, {self._estoque})
         '''
         return sql

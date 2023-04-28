@@ -7,9 +7,9 @@ class Cliente:
     def criarTabelaCliente():
         sql = '''
         CREATE TABLE "Cliente"(
-        "Id_Cliente" int GENERATED ALWAYS IDENTITY PRIMARY KEY,
+        "Id" int GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
         "Nome" varchar(255) NOT NULL,
-        "CPF" varchar(11) NOT NULL,
+        "CPF" varchar(11) NOT NULL
         )
         '''
         return sql
