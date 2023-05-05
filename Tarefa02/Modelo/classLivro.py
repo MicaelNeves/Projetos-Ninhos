@@ -1,5 +1,5 @@
-class Livro: 
 
+class Livro:
     def __init__(self,id_Livro,titulo,autor,preco,estoque):
         self._id_Livro = id_Livro
         self._titulo = titulo
@@ -18,10 +18,17 @@ class Livro:
         )
         '''
         return sql
-    
+
     def inserirLivro(self):
         sql = f'''
         INSERT INTO "Catalogo"
         values(default,'{self._titulo}','{self._autor}', {self._preco}, {self._estoque})
         '''
         return sql
+
+
+
+
+
+
+
